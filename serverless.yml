@@ -1,0 +1,15 @@
+
+
+service: node-lambda
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: app/test
+          method: get
